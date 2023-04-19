@@ -1,5 +1,5 @@
 {
-  unction ExpenseItem(){
+   function ExpenseItem(){
     return(<div>
         <h1>ExpenseItem!</h1>
       <h2>Food-Rs 10</h2>
