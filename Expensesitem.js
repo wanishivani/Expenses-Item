@@ -1,15 +1,24 @@
+import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
-function Expenseitem(props) {
+import Card from "../UI/Card";
+import React from 'react';
+
+function Expensesitem(props) {
+  const clickHandler = () =>{
+    console.log("clicked!!!")
+  }
   return (
-    <div className="expense-item">
-      <div>{props.date.toISOString()}</div>
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div>{props.date.toLocaleString()}</div>
+      <h2>{props.tittle}</h2>
 
       <div className="expense-items_descreption">
-               <h2>{props.tittle}</h2>
         <div className="Expense-item_price">${props.amount}</div>
+      </div>
+      <button onClick={clickHandler}>Change tittle</button>
 
-    </div>
-    </div>
+    </Card>
   );
 }
-export default Expenseitem;
+export default Expensesitem;
