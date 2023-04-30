@@ -4,7 +4,7 @@ import React from 'react';
 
 function ExpenseDate(props) {
     const Month=props.date.toLocaleString('en-IN',{month:'long'});
-    const Day=props.date.toLocaleString('en-In',{day:'2-digit'});
+    const Day=props.date.toLocaleString('en-IN',{day:'2-digit'});
         const year=props.date.getFullYear();
 
  return(
